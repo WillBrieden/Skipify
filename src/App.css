@@ -28,6 +28,64 @@
   color: #61dafb;
 }
 
+.Home{
+  display: flex;
+  justify-content: center;
+}
+
+.Player{
+  background-color: #a8a8a8;
+  max-height: 10vh;
+  max-width: 45vw;
+  margin-bottom: 5vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-top: 1vh; 
+  padding-bottom: 1vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  box-shadow: #666666 -4px 4px;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  border-radius: 2vh;
+}
+
+.Player-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Player-text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+  text-align: center;
+  justify-content: center;
+}
+
+.song{
+  font-size: medium;
+}
+
+.artist{
+  font-size: smaller;
+}
+
+.Player-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.now-playing__cover{
+  height: 8vh;
+  width: 8vh;
+  border-radius: 1vh;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
