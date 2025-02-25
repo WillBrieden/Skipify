@@ -9,11 +9,16 @@ function Home(props) {
     }
 
     return (
-      <>
-        <div className="container, Home">
+      <div>
+        <div className="app">
+          <div className="container, Home">
+        
+          </div>
+        </div>
+        <div className="container">
           {token !== '' && <WebPlayback token={token}/>}
         </div>
-      </>
+      </div>
     );
 }
 

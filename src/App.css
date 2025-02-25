@@ -2,6 +2,21 @@
   text-align: center;
 }
 
+.app {
+  background-color: #a8a8a8;
+  background-image: radial-gradient(
+    circle at center,
+    #555555 1px,
+    transparent 0
+  );
+  background-size: 8px 8px;
+  background-repeat: round;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -29,24 +44,78 @@
 }
 
 .Home{
+  background-color:#c8c8c8;
   display: flex;
   justify-content: center;
+  box-shadow: #454545 -6px 6px;
+  margin-left: 7.5vw;
+  margin-right: 7.5vw;
+  width: 85vw;
+  min-height: 90vh;
+  border-radius: 2.5vw;
+}
+
+.Login {
+  background-color:#c8c8c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #454545 -6px 6px;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 15vh;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 2.5vw;
+}
+
+.btn-spotify {
+  background-color: #1ed760;
+  color: black;
+  display: flex;
+  box-shadow: #666666 -3px 3px;
+  justify-content: center;
+  align-items: center;
+  font: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 20%;
+  height: 5vh;
+  border-radius: 2.5vh;
+}
+
+.btn-spotify-player {
+  background-color: #1ed760;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 30%;
+  min-height: 120%;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 2.5vh;
 }
 
 .Player{
   background-color: #a8a8a8;
   max-height: 10vh;
-  max-width: 45vw;
-  margin-bottom: 5vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 15vw;
+  margin-left: 42.5vw;
+  margin-right: 42.5vw;
+  margin-bottom: 2vh;
   padding-top: 1vh; 
   padding-bottom: 1vh;
   padding-left: 2vh;
   padding-right: 2vh;
   box-shadow: #666666 -4px 4px;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   border-radius: 2vh;
 }
