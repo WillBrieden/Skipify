@@ -52,7 +52,30 @@
   margin-right: 7.5vw;
   width: 85vw;
   min-height: 90vh;
-  border-radius: 2.5vw;
+  border-radius: 0vw 2.5vw 2.5vw 2.5vw;
+  z-index: 1;
+}
+
+.navBar {
+  background-color:#c8c8c8;
+  box-shadow: #454545 -6px 0px;
+  margin-left: 7.5vw;
+  margin-top: -2.5vh;
+  width: 25vw;
+  height: 3.5vh;
+  border-radius: 1vw 1vw 0vw 0vw;
+  position: fixed;
+  z-index: 2;
+}
+
+.navButton {
+  font: black bold 10px;
+  position: relative;
+  width: 33%;
+  height: 100%;
+  background-color: #c8c8c8;
+  border-radius: 1vw;
+  border-color: transparent;
 }
 
 .Login {
