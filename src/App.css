@@ -12,13 +12,14 @@
   background-size: 8px 8px;
   background-repeat: round;
   padding-top: 5vh;
-  padding-bottom: 5vh;
-  min-height: 100vh;
-  min-width: 100vw;
+  padding-bottom: 4.5vh;
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 0;
   pointer-events: none;
 }
 
@@ -50,27 +51,39 @@
   box-shadow: #454545 -6px 6px;
   margin-left: 7.5vw;
   margin-right: 7.5vw;
+  min-width: 270px;
   width: 85vw;
   min-height: 90vh;
+  border: 2px solid #000000;
   border-radius: 0vw 2.5vw 2.5vw 2.5vw;
-  z-index: 1;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
 }
 
 .navBar {
   background-color:#c8c8c8;
   box-shadow: #454545 -6px 0px;
   margin-left: 7.5vw;
+  margin-right: auto;
   margin-top: -2.5vh;
+  min-width: 270px;
   width: 25vw;
   height: 3.5vh;
+  border: 2px solid #000000;
+  border-bottom: transparent;
   border-radius: 1vw 1vw 0vw 0vw;
   position: fixed;
-  z-index: 2;
+  top: 4vh;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .navButton {
   font: black bold 10px;
   position: relative;
+  min-width: 90px;
   width: 33%;
   height: 100%;
   background-color: #c8c8c8;
@@ -89,6 +102,7 @@
   margin-top: 15vh;
   width: 40vw;
   height: 60vh;
+  border: 1px solid #000000;
   border-radius: 2.5vw;
 }
 
@@ -128,9 +142,10 @@
 .Player{
   background-color: #a8a8a8;
   max-height: 10vh;
+  min-width: 215px;
   width: 15vw;
-  margin-left: 42.5vw;
-  margin-right: 42.5vw;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2vh;
   padding-top: 1vh; 
   padding-bottom: 1vh;
@@ -139,7 +154,10 @@
   box-shadow: #666666 -4px 4px;
   justify-content: center;
   position: fixed;
+  left: 0;
+  right: 0;
   bottom: 0;
+  border: 1px solid #000000;
   border-radius: 2vh;
 }
 
@@ -176,6 +194,7 @@
   height: 8vh;
   width: 8vh;
   border-radius: 1vh;
+  box-shadow: #555555 -2px 2px;
 }
 
 @keyframes App-logo-spin {
