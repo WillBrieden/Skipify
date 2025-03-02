@@ -1,3 +1,8 @@
+Web app built with the Create React App to use the Spotify Web API to compile and display data relating to the user's listening habits through Spotify. 
+Also includes a music player built with Spotify's Web Playback SDK.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
