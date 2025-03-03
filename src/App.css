@@ -106,37 +106,37 @@
   border-radius: 2.5vw;
 }
 
-.btn-spotify {
-  background-color: #1ed760;
-  color: black;
+.profileButton {
+  background-color: #c8c8c8;
   display: flex;
-  box-shadow: #666666 -3px 3px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font: 12px;
-  font-weight: bold;
-  text-decoration: none;
-  min-width: 20%;
-  height: 5vh;
-  border-radius: 2.5vh;
+  box-shadow: #454545 -6px 6px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: 1.5vw;
+  margin-top: -3vh;
+  min-width: 1vw;
+  min-height: 1vh;
+  width: 90px;
+  height: 90px;
+  right: 0px;
+  border: 1px solid #000000;
+  border-radius: 1vw;
 }
 
-.btn-spotify-player {
-  background-color: #1ed760;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font: 10px;
+.profileImage {
+  width: 67%;
+  height: 67%;
+  border-radius: 30px;
+  margin-top: 10%;
+}
+
+.displayName {
   font-weight: bold;
-  text-decoration: none;
-  min-width: 30%;
-  min-height: 120%;
-  padding-left: 9px;
-  padding-right: 9px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 2.5vh;
+  font-size: 9px;
+  margin-bottom: 10%;
 }
 
 .Player{
@@ -173,6 +173,40 @@
   margin-left: 1vw;
   text-align: center;
   justify-content: center;
+}
+
+
+.btn-spotify {
+  background-color: #1ed760;
+  color: black;
+  display: flex;
+  box-shadow: #666666 -3px 3px;
+  justify-content: center;
+  align-items: center;
+  font: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 20%;
+  height: 5vh;
+  border-radius: 2.5vh;
+}
+
+.btn-spotify-player {
+  background-color: #1ed760;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 30%;
+  min-height: 120%;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 2.5vh;
 }
 
 .song{
