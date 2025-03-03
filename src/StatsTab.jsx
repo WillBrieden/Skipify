@@ -1,6 +1,7 @@
 import React from "react";
 
 function StatsTab(props){
+    const token = props.token;
     if(!props.active){
         return null;
     }else{

@@ -30,9 +30,9 @@ function Home(props) {
             </button>
           </div>
           <div className="container, Home">
-              <HomeTab active={homeActive}></HomeTab>
-              <StatsTab active={statsActive}></StatsTab>
-              <Playlists active={playlistsActive}></Playlists>
+              <HomeTab active={homeActive} token={token}></HomeTab>
+              <StatsTab active={statsActive} token={token}></StatsTab>
+              <Playlists active={playlistsActive} token={token}></Playlists>
           </div>
         </div>
         <div className="container">
