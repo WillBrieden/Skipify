@@ -9,12 +9,15 @@ function Profile(props){
         return null;
     }else{
         return (
-            <div>
-                <a href={profile.external_urls.spotify}><img src={imgSrc} alt="" />
+            <div className="profileTab">
+                <a className="profileLink" href={profile.external_urls.spotify}><img src={imgSrc} alt="" />
                 <h1>{profile.display_name}</h1></a>
-                <p>Country: {profile.country}</p>
-                <p>Followers: {profile.followers.total}</p>
-                <p>Subscription Type: {profile.product}</p>
+                <p className="profileHeader">Country </p>
+                <p className="profileInfo">{profile.country}</p>
+                <p className="profileHeader">Followers </p>
+                <p className="profileInfo">{profile.followers.total}</p>
+                <p className="profileHeader">Subscription Type </p>
+                <p className="profileInfo">{profile.product}</p>
             </div>
         )
     }
