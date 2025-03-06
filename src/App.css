@@ -173,6 +173,22 @@
   margin-top: 10%;
 }
 
+.playlistItem {
+  display: inline-flex;
+  height: 4.5vh;
+  width: 100%;
+}
+
+.playlistItem img{
+  height: 3vh;
+  width: 3vh;
+  margin: .5vw;
+}
+
+.playlistItem p {
+  margin: .5vw;
+}
+
 .displayName {
   font-weight: bold;
   font-size: 9px;
