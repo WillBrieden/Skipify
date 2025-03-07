@@ -189,6 +189,11 @@
   margin: .5vw;
 }
 
+.playlistButtons {
+  display: flex;
+  justify-content: center;
+}
+
 .displayName {
   font-weight: bold;
   font-size: 9px;
