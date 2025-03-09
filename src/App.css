@@ -175,7 +175,7 @@
 
 .playlistItem {
   display: inline-flex;
-  height: 4.5vh;
+  height: 4.25vh;
   width: 100%;
 }
 
@@ -192,6 +192,18 @@
 .playlistButtons {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.btn-spotify-playlists {
+  background-color: #1ed760;
+  color: black;
+  font: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 60px;
+  min-height: 20px;
+  border-radius: 10px;
 }
 
 .displayName {

@@ -4,7 +4,7 @@ import PlaylistItem from "./PlaylistItem";
 function Playlists(props){
     const [token, setToken] = useState(props.token);
     const [fetchUrl, setFetchUrl] = useState("https://api.spotify.com/v1/me/playlists");
-    const [data, setData] = useState(null);
+    const [data, setData] = useState({});
 
     useEffect(() => {
         async function fetchPlaylists(){
@@ -12,12 +12,10 @@ function Playlists(props){
             const json = await response.json();
 
             setData(json);
-            console.log(data)
         }
-        if(props.active){
-            fetchPlaylists();
-        }
-    }, [fetchUrl, token, props.active]);
+
+        fetchPlaylists();
+    }, []);
 
     if(!props.active || data == null){
         return null;
@@ -29,9 +27,9 @@ function Playlists(props){
                     : 'No Playlists Found'
                 }
                 <div className="playlistButtons">
-                    <button className="btn-spotify-playlists" onClick={setFetchUrl(data.previous)}>Prev</button>
+                    <button className="btn-spotify-playlists" onClick={() => setFetchUrl(data.previous)}>Prev</button>
                     <p>{data.limit} {data.offset}/{data.total}</p>
-                    <button className="btn-spotify-playlists" onClick={setFetchUrl(data.next)}>Next</button>
+                    <button className="btn-spotify-playlists" onClick={() => setFetchUrl(data.next)}>Next</button>
                 </div>
             </div>
         );
