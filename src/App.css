@@ -13,7 +13,7 @@
   background-repeat: round;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  min-height: 100%;
+  min-height: 90vh;
   width: 100%;
 }
 
@@ -50,6 +50,7 @@
   box-shadow: #454545 -6px 6px;
   margin-left: 7.5vw;
   margin-right: 7.5vw;
+  margin-bottom: -2.5vh;
   min-width: 270px;
   width: 85vw;
   min-height: 90vh;
