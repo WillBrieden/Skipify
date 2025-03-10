@@ -12,10 +12,9 @@
   background-size: 8px 8px;
   background-repeat: round;
   padding-top: 5vh;
-  padding-bottom: 4.5vh;
-  height: 100%;
+  padding-bottom: 5vh;
+  min-height: 100%;
   width: 100%;
-  position: fixed;
 }
 
 .App-logo {
@@ -54,11 +53,10 @@
   min-width: 270px;
   width: 85vw;
   min-height: 90vh;
+  height: fit-content;
   border: 2px solid #000000;
   border-radius: 0vw 2.5vw 2.5vw 2.5vw;
   z-index: 2;
-  position: fixed;
-  overflow: hidden;
 }
 
 .navBar {
@@ -73,7 +71,6 @@
   border: 2px solid #000000;
   border-bottom: transparent;
   border-radius: 1vw 1vw 0vw 0vw;
-  position: fixed;
   top: 4vh;
   left: 0;
   right: 0;
@@ -173,10 +170,13 @@
   margin-top: 10%;
 }
 
+
 .playlistItem {
   display: inline-flex;
   height: 4.25vh;
   width: 100%;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 2px;
 }
 
 .playlistItem img{
