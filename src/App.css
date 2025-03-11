@@ -46,6 +46,7 @@
 .Home{
   background-color:#c8c8c8;
   display: flex;
+  box-sizing: content-box;
   justify-content: center;
   box-shadow: #454545 -6px 6px;
   margin-left: 7.5vw;
@@ -171,16 +172,24 @@
   margin-top: 10%;
 }
 
+.playlistsTab {
+  width: 100%;
+}
 
 .playlistItem {
-  display: inline-flex;
+  position: relative;
+  display: flex;
+  box-sizing: content-box;
   height: 4.25vh;
   width: 100%;
   border-bottom: 2px solid #000000;
   margin-bottom: 2px;
+  padding-bottom: 2px;
 }
 
 .playlistItem img{
+  position: absolute;
+  left: 1%;
   height: 3vh;
   width: 3vh;
   margin: .5vw;
@@ -188,6 +197,35 @@
 
 .playlistItem p {
   margin: .5vw;
+}
+
+.playlistName {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  left: 7.5%;
+  font-weight: bold;
+  width: 32%;
+  font-size: 16px;
+  text-overflow: ellipsis;
+}
+
+.playlistDisplay {
+  position: absolute;
+  left: 40%;
+  font-size: 16px;
+}
+
+.playlistPublic {
+  position: absolute;
+  left: 60%;
+  font-size: 14px;
+}
+
+.playlistTracks {
+  position: absolute;
+  left: 80%;
+  font-size: 14px;
 }
 
 .playlistButtons {
