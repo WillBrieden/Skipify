@@ -7,7 +7,9 @@ function StatsTab(props){
     }else{
         return (
             <div>
-                Stats Tab!
+                <div className="genreGraph">Graph</div>
+                <div className="topArtists">Your Top Artists</div>
+                <div className="activeTimes">Listening Time</div>
             </div>
         );
     }
