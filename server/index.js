@@ -33,6 +33,7 @@ app.get('/auth/login', (req,res) => {
     var scope = "streaming \
                user-read-email \
                user-read-private \
+               user-read-recently-played \
                playlist-read-private";
 
     var state = generateRandomString(16);
