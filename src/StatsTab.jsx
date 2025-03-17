@@ -53,8 +53,18 @@ function StatsTab(props){
     }else{
         return (
             <div>
-                <div className="genreGraph">Graph</div>
-                <div className="topArtists">Your Top Artists</div>
+                <div className="genreGraph">
+                Genre Graph
+                <p>3 Months</p>
+                <p>12 Months</p>
+                <p>All Time</p>
+                </div>
+                <div className="topArtists">
+                Your Top Artists
+                <p>3 Months</p>
+                <p>12 Months</p>
+                <p>All Time</p>
+                </div>
                 <div className="activeTimes">
                     Listening Time
                     <p>0 - 6 AM : {timeListened[0]}</p>
