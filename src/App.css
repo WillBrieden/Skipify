@@ -172,6 +172,16 @@
   margin-top: 10%;
 }
 
+.activeTimes {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.activeTimes p{
+  font-weight: lighter;
+  font-size: 12px;
+}
+
 .playlistsTab {
   width: 100%;
 }
