@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 function StatsTab(props){
     const token = props.token;
+    const [genreFetchRange, setGenreFetchRange] = useState('30 Days');
+    const [artistFetchRange, setArtistFetchRange] = useState('30 Days');
+    const [showArtistDropdown, setShowArtist] = useState(false);
     const [timeListened, setTimeListened] = useState([0,0,0,0]);
 
     useEffect(() => {
@@ -11,6 +14,10 @@ function StatsTab(props){
 
             console.log(json.items)
             getTimeListened(json.items);
+        }
+
+        async function getPlayHistory(){
+
         }
 
         async function getTimeListened(history){
@@ -48,6 +55,25 @@ function StatsTab(props){
         getStats()
     });
 
+    const showArtist = () => {
+        setShowArtist(!showArtistDropdown);
+    };
+
+    const artist30Days = () => {
+        setShowArtist(false);
+        setArtistFetchRange('30 Days')
+    }
+
+    const artist6Months = () => {
+        setShowArtist(false);
+        setArtistFetchRange('6 Months')
+    }
+
+    const artistAllTime = () => {
+        setShowArtist(false);
+        setArtistFetchRange('All Time')
+    }
+
     if(!props.active){
         return null;
     }else{
@@ -61,9 +87,22 @@ function StatsTab(props){
                 </div>
                 <div className="topArtists">
                 Your Top Artists
-                <p>3 Months</p>
-                <p>12 Months</p>
-                <p>All Time</p>
+                <div className="dropdown">
+                    <button onClick={showArtist}>{artistFetchRange}</button>
+                    {showArtistDropdown ?
+                        (<ul className="dropdownMenu">
+                            <li className="dropdownItem">
+                                <button onClick={artist30Days}>30 Days</button>
+                            </li>
+                            <li className="dropdownItem">
+                                <button onClick={artist6Months}>6 Months</button>
+                            </li>
+                            <li className="dropdownItem">
+                                <button onClick={artistAllTime}>All Time</button>
+                            </li>
+                        </ul>)
+                        : null }
+                </div>
                 </div>
                 <div className="activeTimes">
                     Listening Time
