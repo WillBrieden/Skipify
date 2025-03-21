@@ -5,6 +5,7 @@ function StatsTab(props){
     const [genreFetchRange, setGenreFetchRange] = useState('30 Days');
     const [artistFetchRange, setArtistFetchRange] = useState('30 Days');
     const [showArtistDropdown, setShowArtist] = useState(false);
+    const [showGenreDropdown, setShowGenre] = useState(false);
     const [timeListened, setTimeListened] = useState([0,0,0,0]);
 
     useEffect(() => {
@@ -59,6 +60,10 @@ function StatsTab(props){
         setShowArtist(!showArtistDropdown);
     };
 
+    const showGenre = () => {
+        setShowGenre(!showGenreDropdown);
+    };
+
     const artist30Days = () => {
         setShowArtist(false);
         setArtistFetchRange('30 Days')
@@ -74,6 +79,21 @@ function StatsTab(props){
         setArtistFetchRange('All Time')
     }
 
+    const genre30Days = () => {
+        setShowGenre(false);
+        setGenreFetchRange('30 Days')
+    }
+
+    const genre6Months = () => {
+        setShowGenre(false);
+        setGenreFetchRange('6 Months')
+    }
+
+    const genreAllTime = () => {
+        setShowGenre(false);
+        setGenreFetchRange('All Time')
+    }
+
     if(!props.active){
         return null;
     }else{
@@ -81,9 +101,22 @@ function StatsTab(props){
             <div>
                 <div className="genreGraph">
                 Genre Graph
-                <p>3 Months</p>
-                <p>12 Months</p>
-                <p>All Time</p>
+                <div className="dropdown">
+                    <button onClick={showGenre}>{genreFetchRange}</button>
+                    {showGenreDropdown ?
+                        (<ul className="dropdownMenu">
+                            <li className="dropdownItem">
+                                <button onClick={genre30Days}>30 Days</button>
+                            </li>
+                            <li className="dropdownItem">
+                                <button onClick={genre6Months}>6 Months</button>
+                            </li>
+                            <li className="dropdownItem">
+                                <button onClick={genreAllTime}>All Time</button>
+                            </li>
+                        </ul>)
+                        : null }
+                </div>
                 </div>
                 <div className="topArtists">
                 Your Top Artists
