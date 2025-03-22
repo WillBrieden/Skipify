@@ -43,6 +43,51 @@
   color: #61dafb;
 }
 
+.dropdownButton {
+  width: 120px;
+  background-color: white;
+  border-radius: 8px;
+  border-width: 1px;
+}
+
+.dropdownContainer {
+  position: absolute;
+  background-color: white;
+  width: 120px;
+  height: min-content;
+  border-radius: 8px;
+}
+
+.dropdownMenu {
+  position: relative;
+  display: inline-flexbox;
+  justify-content: left;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  width: 120px;
+  height: fit-content;
+}
+
+.dropdownItem {
+  position: relative;
+  height: min-content;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.dropdownItemButton {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0px;
+  padding-inline: 0px;
+  padding-block: 0px;
+  margin: 0px;
+  width: 120px;
+  height: 15px;
+}
+
 .Home{
   background-color:#c8c8c8;
   display: flex;

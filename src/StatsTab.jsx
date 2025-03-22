@@ -102,38 +102,41 @@ function StatsTab(props){
                 <div className="genreGraph">
                 Genre Graph
                 <div className="dropdown">
-                    <button onClick={showGenre}>{genreFetchRange}</button>
+                    <button className="dropdownButton" onClick={showGenre}>{genreFetchRange}</button>
                     {showGenreDropdown ?
-                        (<ul className="dropdownMenu">
+                        (<div className="dropdownContainer">
+                        <ul className="dropdownMenu">
                             <li className="dropdownItem">
-                                <button onClick={genre30Days}>30 Days</button>
+                                <button className="dropdownItemButton" onClick={genre30Days}>30 Days</button>
                             </li>
                             <li className="dropdownItem">
-                                <button onClick={genre6Months}>6 Months</button>
+                                <button className="dropdownItemButton" onClick={genre6Months}>6 Months</button>
                             </li>
                             <li className="dropdownItem">
-                                <button onClick={genreAllTime}>All Time</button>
+                                <button className="dropdownItemButton" onClick={genreAllTime}>All Time</button>
                             </li>
-                        </ul>)
+                        </ul></div>)
                         : null }
                 </div>
                 </div>
                 <div className="topArtists">
                 Your Top Artists
                 <div className="dropdown">
-                    <button onClick={showArtist}>{artistFetchRange}</button>
+                    <button className="dropdownButton" onClick={showArtist}>{artistFetchRange}</button>
                     {showArtistDropdown ?
-                        (<ul className="dropdownMenu">
+                        (<div className="dropdownContainer">
+                            <ul className="dropdownMenu">
                             <li className="dropdownItem">
-                                <button onClick={artist30Days}>30 Days</button>
+                                <button className="dropdownItemButton" onClick={artist30Days}>30 Days</button>
                             </li>
                             <li className="dropdownItem">
-                                <button onClick={artist6Months}>6 Months</button>
+                                <button className="dropdownItemButton" onClick={artist6Months}>6 Months</button>
                             </li>
                             <li className="dropdownItem">
-                                <button onClick={artistAllTime}>All Time</button>
+                                <button className="dropdownItemButton" onClick={artistAllTime}>All Time</button>
                             </li>
-                        </ul>)
+                        </ul></div>
+                        )
                         : null }
                 </div>
                 </div>
