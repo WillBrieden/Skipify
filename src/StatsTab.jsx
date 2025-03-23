@@ -13,6 +13,32 @@ function StatsTab(props){
             const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50', {method: "GET", headers: { Authorization: 'Bearer ' + token}})
             const json = await response.json()
 
+            var genreFetchMod = new Date();
+
+            switch(genreFetchRange){
+                case '30 Days':
+                    genreFetchMod.setDate(genreFetchMod.getDate() - 30)
+                    break;
+                case '6 Months':
+                    genreFetchMod.setDate(genreFetchMod.getDate() - 180)
+                    break;
+                default:
+                    genreFetchMod = Date.now();
+            }
+
+            var artistFetchMod = new Date();
+
+            switch(artistFetchRange){
+                case '30 Days':
+                    artistFetchMod.setDate(artistFetchMod.getDate() - 30)
+                    break;
+                case '6 Months':
+                    artistFetchMod.setDate(artistFetchMod.getDate() - 180)
+                    break;
+                default:
+                    artistFetchMod = Date.now();
+            }
+
             console.log(json.items)
             getTimeListened(json.items);
         }
