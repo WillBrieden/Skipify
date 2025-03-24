@@ -41,6 +41,9 @@ function StatsTab(props){
                     artistFetchMod = Date.now();
             }
 
+            var genreFetchAfter = new Date() - genreFetchMod.getDate();
+            var artistFetchAfter = new Date() - artistFetchMod.getDate();
+
             getTimeListened(json.items);
         }
 
