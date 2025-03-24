@@ -13,6 +13,8 @@ function StatsTab(props){
             const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50', {method: "GET", headers: { Authorization: 'Bearer ' + token}})
             const json = await response.json()
 
+            setTimeListened([0,0,0,0]);
+
             var genreFetchMod = new Date();
 
             switch(genreFetchRange){
@@ -39,7 +41,6 @@ function StatsTab(props){
                     artistFetchMod = Date.now();
             }
 
-            console.log(json.items)
             getTimeListened(json.items);
         }
 
