@@ -10,9 +10,6 @@ function StatsTab(props){
 
     useEffect(() => {
         async function getStats(){
-            const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50', {method: "GET", headers: { Authorization: 'Bearer ' + token}})
-            const json = await response.json()
-
             setTimeListened([0,0,0,0]);
 
             var genreFetchMod = new Date();
@@ -43,12 +40,18 @@ function StatsTab(props){
 
             var genreFetchAfter = new Date() - genreFetchMod.getDate();
             var artistFetchAfter = new Date() - artistFetchMod.getDate();
+            var fetchAfter = genreFetchAfter >= artistFetchAfter ? artistFetchAfter : genreFetchAfter;
 
-            getTimeListened(json.items);
+            var history = getPlayHistory(fetchAfter);
+
+            getTimeListened(history);
         }
 
-        async function getPlayHistory(){
+        async function getPlayHistory(fetchAfter){
+            const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50after=' + fetchAfter, {method: "GET", headers: { Authorization: 'Bearer ' + token}})
+            const json = await response.json()
 
+            return json.items;
         }
 
         async function getTimeListened(history){
