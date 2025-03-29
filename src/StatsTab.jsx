@@ -42,16 +42,28 @@ function StatsTab(props){
             var artistFetchAfter = new Date() - artistFetchMod.getDate();
             var fetchAfter = genreFetchAfter >= artistFetchAfter ? artistFetchAfter : genreFetchAfter;
 
-            var history = getPlayHistory(fetchAfter);
+            const history = await getPlayHistory(fetchAfter);
 
-            getTimeListened(history);
+            getTimeListened(Array(history));
         }
 
         async function getPlayHistory(fetchAfter){
-            const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50after=' + fetchAfter, {method: "GET", headers: { Authorization: 'Bearer ' + token}})
-            const json = await response.json()
+            var response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50after=' + fetchAfter, {method: "GET", headers: { Authorization: 'Bearer ' + token}})
+            var json = await response.json()
 
-            return json.items;
+            var history = Array(json.items);
+
+            var now = Date.now();
+
+            while(fetchAfter < now){
+                fetchAfter = Number(json.cursors.after);
+                response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=50after=' + fetchAfter, {method: "GET", headers: { Authorization: 'Bearer ' + token}})
+                json = await response.json()
+
+                history += Array(json.items);
+            }
+
+            return history;
         }
 
         async function getTimeListened(history){
@@ -87,7 +99,7 @@ function StatsTab(props){
         }
 
         getStats()
-    });
+    }, [token, genreFetchRange, artistFetchRange]);
 
     const showArtist = () => {
         setShowArtist(!showArtistDropdown);
